@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bookmark</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/book-bookmark-solid.svg">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-warning-subtle">
+  <div class="container py-5 d-flex justify-content-center flex-column align-items-center mainx gap-4">
+    <h1 class="py-2 position-relative">
+      BookMarker</h1>
+  </div>
+  <div class=" p-3 py-4  bookmark-body w-100 gap-4">
+    <h2 class=" text-center">
+      <i class="fa-solid fa-bookmark"></i>
+      Bookmark your favorite sites
+      <i class="fa-solid fa-bookmark"></i>
+    </h2>
+    <form action="">
+      <div class="mb-3">
+        <label for="website name" class="mb-3">
+          <i class="fa-solid fa-book-bookmark"></i>
+          site Name</label>
+        <input type="text" class="form-control" id="websiteName" />
+      </div>
+      <div class="mb-3">
+        <label for="WebSite url" class="mb-3">
+          <i class="fa-solid fa-link pe-2"></i>
+          url</label>
+        <input type="text" class="form-control" id="WebSiteUrl"  />
+      </div>
+      <div class="text-center">
+        <button type="button" id="button" class="btn btn-danger w-10" onclick="addProduct()">
+          Submet
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <table class="table text-center table-striped mt-4">
+    <thead>
+      <th>idex</th>
+      <th>website</th>
+      <th>visit</th>
+      <th>delete</th>
+    </thead>
+    <tbody id="tbody">
+
+
+    </tbody>
+  </table>
+
+
+  <div class="modal-custom position-relative bg-white p-3 d-none" id="modal">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div class="window-buttons position-absolute">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+        <button class="btn border-0 btn-exit" id="closeElement">
+          <i class="fa-solid fa-xmark close fs-3"></i>
+        </button>
+      </div>
+      <h5 class="p-3 m-0 header-5">Site Name or URL is not valid, Please follow the rules below :</h5>
+    </div>
+
+    <div class="modal-body-custom">
+      <ul>
+        <li>
+          <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+          Site name must contain at least 3 characters
+        </li>
+        <li>
+          <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+          Site URL must be a valid one
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/mian.js"></script>
+</body>
+
+</html>
